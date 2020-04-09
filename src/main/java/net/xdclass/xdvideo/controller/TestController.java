@@ -5,13 +5,14 @@ import net.xdclass.xdvideo.config.WeChatConfig;
 import net.xdclass.xdvideo.domain.JsonData;
 import net.xdclass.xdvideo.mapper.VideoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-
-
-@RestController
+@Controller
 public class TestController {
 
 	@RequestMapping("test")
@@ -33,6 +34,11 @@ public class TestController {
 	public Object testVM(){
 
 		return videoMapper.findAll();
+	}
+
+	@GetMapping("/lo")
+	public String alogin(){
+		return "login";
 	}
 	
 }

@@ -20,17 +20,17 @@ public class WeChatConfig {
     /**
      * 开放平台Appid
      */
-    @Value("${wxopen.appid}")
+    @Value("${github.client.id}")
     private String openAppId;
     /**
      * 开放平台appsercret
      */
-    @Value("${wxopen.appsecret}")
+    @Value("${github.client.secret}")
     private String openAppSecret;
     /**
      * 开放平台回调url
      */
-    @Value("${wxopen.redirect_url}")
+    @Value("${github.redirect.uri}")
     private String openRedirectUrl;
     /**
      * 微信开放平台二维码连接
